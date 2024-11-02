@@ -30,14 +30,14 @@ const History = () => {
                 <View style={styles.header}>
                     <Text style={styles.headerText}>Histórico do Pet</Text>
                 </View>
-                <View style={styles.rectangle}>
+                <TouchableOpacity style={styles.rectangle} onPress={() => navigation.navigate("Vaccine")}>
                     <IoICON name='close-circle-outline' size={32} style={styles.topLeftIcon} color="white" />
                     <Image
                         source={zoe}
                         style={styles.petImage}
                     />
                     <Text style={styles.petName}>Zoe</Text>
-                </View>
+                </TouchableOpacity>
             </SafeAreaView>
             <TouchableOpacity style={styles.addButton} onPress={() => navigation.navigate('NewHistory')}>
                 <Text style={styles.addText}>Adicionar Histórico</Text>

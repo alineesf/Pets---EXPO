@@ -33,7 +33,7 @@ const Home = () => {
         const getData = async () => {
             try {
                 const token = await AsyncStorage.getItem('token');
-                const response = await axios.post('http://172.20.88.205:5001/userdata', { token: token });
+                const response = await axios.post('https://bppbackend.onrender.com/userdata', { token: token });
                 setUserData(response.data.data);
             } catch (error) {
                 console.error(error);
@@ -61,7 +61,7 @@ const Home = () => {
                         style={styles.profile}
                     >
                         <Image
-                            source={userData && userData.profileImage ? { uri: `http://192.168.99.35:5001/${userData.profileImage.replace(/\\/g, '/')}` } : profilePick}
+                            source={userData && userData.profileImage ? { uri: `https://bppbackend.onrender.com/${userData.profileImage.replace(/\\/g, '/')}` } : profilePick}
                             style={styles.profileAvatar}
                         />
                         <View style={styles.profileBody}>

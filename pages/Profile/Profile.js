@@ -33,7 +33,7 @@ const Profile = () => {
         const getData = async () => {
             try {
                 const token = await AsyncStorage.getItem('token');
-                const response = await axios.post('http://172.20.88.205:5001/userdata', { token: token });
+                const response = await axios.post('http://192.168.15.9:5001/userdata', { token: token });
                 setUserData(response.data.data);
             } catch (error) {
                 console.error(error);
@@ -57,7 +57,7 @@ const Profile = () => {
                         <IoICON name="chevron-back-outline" size={40} color="white" />
                     </TouchableOpacity>
                     <Image
-                        source={userData && userData.profileImage ? { uri: `http://192.168.99.35:5001/${userData.profileImage.replace(/\\/g, '/')}` } : profilePick}
+                        source={userData && userData.profileImage ? { uri: `http://192.168.15.9:5001/${userData.profileImage.replace(/\\/g, '/')}` } : profilePick}
                         style={styles.profileAvatar}
                     />
                     <Text style={styles.label}>*Email</Text>

@@ -18,6 +18,7 @@ import Register from './pages/Pet/Register/Register';
 import NewHistory from './pages/Pet/NewHistory/NewHistory';
 import History from './pages/Pet/History/History';
 import Consultation from './pages/Pet/Consultation/Consultation';
+import Vaccine from './pages/Pet/Vaccine/Vaccine';
 
 const Stack = createNativeStackNavigator();
 
@@ -58,6 +59,7 @@ const App = () => {
           <Stack.Screen name="NewHistory" component={NewHistory} options={{ headerShown: false }} />
           <Stack.Screen name="History" component={History} options={{ headerShown: false }} />
           <Stack.Screen name="Consultation" component={Consultation} options={{ headerShown: false }} />
+          <Stack.Screen name="Vaccine" component={Vaccine} options={{ headerShown: false }} />
         </Stack.Navigator>
       </View>
     </NavigationContainer>
