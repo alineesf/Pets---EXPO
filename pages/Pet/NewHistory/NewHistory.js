@@ -290,7 +290,7 @@ const NewHistory = () => {
 
 
                     
-                    <TouchableOpacity style={styles.addButton} onPress={() => navigation.navigate('Register')}>
+                    <TouchableOpacity style={styles.addButton} onPress={() => navigation.navigate('History')}>
                         <Text style={styles.addText}>Salvar</Text>
                     </TouchableOpacity>
                 </ScrollView>

@@ -26,10 +26,10 @@ const Notifications = () => {
         <LinearGradient colors={['#9C51FD', '#2B1240']} style={styles.container}>
             <SafeAreaView style={styles.container}>
 
-                {/* Conteúdo da imagem e texto centralizados */}
+
                 <View style={styles.centeredContent}>
                     <Image 
-                        source={require('../../assets/Chatbot.png')} // Caminho da imagem
+                        source={require('../../assets/Chatbot.png')} 
                         style={styles.image}
                     />
                     <Text style={styles.text}>ChatBot IA</Text>

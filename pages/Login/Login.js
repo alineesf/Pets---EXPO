@@ -94,7 +94,7 @@ const Login = () => {
     formData.append('password', password);
   
     axios
-      .post('https://bppbackend.onrender.com/SignUpForm', formData, {
+      .post('https://pets-expo.onrender.com/SignUpForm', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -125,7 +125,7 @@ const Login = () => {
 
     setLoading(true);
 
-    axios.post('https://bppbackend.onrender.com/LoginForm', userData)
+    axios.post('https://pets-expo.onrender.com/LoginForm', userData)
       .then(res => {
         if (res.data.status === 'ok') {
           AsyncStorage.setItem('token', res.data.data);

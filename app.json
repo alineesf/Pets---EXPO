@@ -11,21 +11,37 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "fonts": {
       "MyCustomFont": "./assets/fonts/MyFonts.ttf"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "runtimeVersion": {
+        "policy": "appVersion"
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/logo.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.lcfjunior.PetsTEST2",
+      "runtimeVersion": "1.0.0"
     },
     "web": {
       "favicon": "./assets/logo.png"
+    },
+    "extra": {
+      "eas": {
+        "newArchEnabled": true,
+        "projectId": "fda3e584-6d7b-4758-9555-54dfc9e15c09"
+      }
+    },
+    "updates": {
+      "url": "https://u.expo.dev/fda3e584-6d7b-4758-9555-54dfc9e15c09"
     }
   }
 }

@@ -26,7 +26,26 @@ const Consultation = () => {
     const [isCheckedFemea, setIsCheckedFemea] = useState(false);
     const [isCheckedMacho, setIsCheckedMacho] = useState(false);
     const [telephone, setTelephone] = useState("");
+    
+    // Estados para os checkboxes
     const [isChecked, setIsChecked] = useState(false);
+    const [isCheckedFaltaApetite, setIsCheckedFaltaApetite] = useState(false);
+    const [isCheckedDiarreia, setIsCheckedDiarreia] = useState(false);
+    const [isCheckedVomito, setIsCheckedVomito] = useState(false);
+    const [isCheckedCansacoRespiratorio, setIsCheckedCansacoRespiratorio] = useState(false);
+    const [isCheckedSecrecaoNasal, setIsCheckedSecrecaoNasal] = useState(false);
+    const [isCheckedTosse, setIsCheckedTosse] = useState(false);
+    const [isCheckedConvulsao, setIsCheckedConvulsao] = useState(false);
+    const [isCheckedDificuldadeLocomocao, setIsCheckedDificuldadeLocomocao] = useState(false);
+    const [isCheckedAlteracoesPosturais, setIsCheckedAlteracoesPosturais] = useState(false);
+    const [isCheckedFraturas, setIsCheckedFraturas] = useState(false);
+    const [isCheckedEctoparasitas, setIsCheckedEctoparasitas] = useState(false);
+    const [isCheckedQuedaPelo, setIsCheckedQuedaPelo] = useState(false);
+    const [isCheckedAlopecia, setIsCheckedAlopecia] = useState(false);
+    const [isCheckedSecrecaoOcular, setIsCheckedSecrecaoOcular] = useState(false);
+    const [isCheckedDeficitVisual, setIsCheckedDeficitVisual] = useState(false);
+    const [isCheckedSecrecao, setIsCheckedSecrecao] = useState(false);
+
 
     const profilePick = require('../../../assets/profilepickPET.jpg');
 
@@ -77,8 +96,7 @@ const Consultation = () => {
                             <Text style={styles.labelDuo}>Data:</Text>
                                 <TextInput
                                     style={styles.inputDuo}
-                                    placeholder='            /            /            '
-                                    secureTextEntry={true}
+                                    placeholder='______/______/______'
                                 />
                             </View>
                         <View style={styles.inputContainer}>
@@ -86,7 +104,6 @@ const Consultation = () => {
                             <TextInput
                                 style={styles.inputDuo}
                                 placeholder='                      :                      '
-                                secureTextEntry={true}
                             />
                             </View>
                         </View>
@@ -114,128 +131,128 @@ const Consultation = () => {
                         >Ficha de Exame</Text>
                         <View style={{ flexDirection: 'row', alignItems: 'center', alignSelf: 'flex-start', marginTop: 5, marginLeft: 20 }}>
                             <CheckBox
-                                checked={isChecked}
-                                onPress={() => setIsChecked(!isChecked)}
+                                checked={isCheckedFaltaApetite}
+                                onPress={() => setIsCheckedFaltaApetite(!isCheckedFaltaApetite)}
                                 containerStyle={{ padding: 0, margin: 0 }}
                             />
                             <Text style={{ fontSize: 16, color: 'white', marginLeft: 10 }}>Falta de apetite</Text>
                         </View>
                         <View style={{ flexDirection: 'row', alignItems: 'center', alignSelf: 'flex-start', marginTop: 5, marginLeft: 20 }}>
                             <CheckBox
-                                checked={isChecked}
-                                onPress={() => setIsChecked(!isChecked)}
+                                checked={isCheckedDiarreia}
+                                onPress={() => setIsCheckedDiarreia(!isCheckedDiarreia)}
                                 containerStyle={{ padding: 0, margin: 0 }}
                             />
                             <Text style={{ fontSize: 16, color: 'white', marginLeft: 10 }}>Diarréia</Text>
                         </View>
                         <View style={{ flexDirection: 'row', alignItems: 'center', alignSelf: 'flex-start', marginTop: 5, marginLeft: 20 }}>
                             <CheckBox
-                                checked={isChecked}
-                                onPress={() => setIsChecked(!isChecked)}
+                                checked={isCheckedVomito}
+                                onPress={() => setIsCheckedVomito(!isCheckedVomito)}
                                 containerStyle={{ padding: 0, margin: 0 }}
                             />
                             <Text style={{ fontSize: 16, color: 'white', marginLeft: 10 }}>Vômito</Text>
                         </View>
                         <View style={{ flexDirection: 'row', alignItems: 'center', alignSelf: 'flex-start', marginTop: 5, marginLeft: 20 }}>
                             <CheckBox
-                                checked={isChecked}
-                                onPress={() => setIsChecked(!isChecked)}
+                                checked={isCheckedCansacoRespiratorio}
+                                onPress={() => setIsCheckedCansacoRespiratorio(!isCheckedCansacoRespiratorio)}
                                 containerStyle={{ padding: 0, margin: 0 }}
                             />
                             <Text style={{ fontSize: 16, color: 'white', marginLeft: 10 }}>Cansaço respiratório</Text>
                         </View>
                         <View style={{ flexDirection: 'row', alignItems: 'center', alignSelf: 'flex-start', marginTop: 5, marginLeft: 20 }}>
                             <CheckBox
-                                checked={isChecked}
-                                onPress={() => setIsChecked(!isChecked)}
+                                checked={isCheckedSecrecaoNasal}
+                                onPress={() => setIsCheckedSecrecaoNasal(!isCheckedSecrecaoNasal)}
                                 containerStyle={{ padding: 0, margin: 0 }}
                             />
                             <Text style={{ fontSize: 16, color: 'white', marginLeft: 10 }}>Secreção nasal</Text>
                         </View>
                         <View style={{ flexDirection: 'row', alignItems: 'center', alignSelf: 'flex-start', marginTop: 5, marginLeft: 20 }}>
                             <CheckBox
-                                checked={isChecked}
-                                onPress={() => setIsChecked(!isChecked)}
+                                checked={isCheckedTosse}
+                                onPress={() => setIsCheckedTosse(!isCheckedTosse)}
                                 containerStyle={{ padding: 0, margin: 0 }}
                             />
                             <Text style={{ fontSize: 16, color: 'white', marginLeft: 10 }}>Tosse</Text>
                         </View>
                         <View style={{ flexDirection: 'row', alignItems: 'center', alignSelf: 'flex-start', marginTop: 5, marginLeft: 20 }}>
                             <CheckBox
-                                checked={isChecked}
-                                onPress={() => setIsChecked(!isChecked)}
+                                checked={isCheckedConvulsao}
+                                onPress={() => setIsCheckedConvulsao(!isCheckedConvulsao)}
                                 containerStyle={{ padding: 0, margin: 0 }}
                             />
                             <Text style={{ fontSize: 16, color: 'white', marginLeft: 10 }}>Convulsão</Text>
                         </View>
                         <View style={{ flexDirection: 'row', alignItems: 'center', alignSelf: 'flex-start', marginTop: 5, marginLeft: 20 }}>
                             <CheckBox
-                                checked={isChecked}
-                                onPress={() => setIsChecked(!isChecked)}
+                                checked={isCheckedDificuldadeLocomocao}
+                                onPress={() => setIsCheckedDificuldadeLocomocao(!isCheckedDificuldadeLocomocao)}
                                 containerStyle={{ padding: 0, margin: 0 }}
                             />
                             <Text style={{ fontSize: 16, color: 'white', marginLeft: 10 }}>Dificuldade de locomoção</Text>
                         </View>
                         <View style={{ flexDirection: 'row', alignItems: 'center', alignSelf: 'flex-start', marginTop: 5, marginLeft: 20 }}>
                             <CheckBox
-                                checked={isChecked}
-                                onPress={() => setIsChecked(!isChecked)}
+                                checked={isCheckedAlteracoesPosturais}
+                                onPress={() => setIsCheckedAlteracoesPosturais(!isCheckedAlteracoesPosturais)}
                                 containerStyle={{ padding: 0, margin: 0 }}
                             />
                             <Text style={{ fontSize: 16, color: 'white', marginLeft: 10 }}>Alterações posturais</Text>
                         </View>
                         <View style={{ flexDirection: 'row', alignItems: 'center', alignSelf: 'flex-start', marginTop: 5, marginLeft: 20 }}>
                             <CheckBox
-                                checked={isChecked}
-                                onPress={() => setIsChecked(!isChecked)}
+                                checked={isCheckedFraturas}
+                                onPress={() => setIsCheckedFraturas(!isCheckedFraturas)}
                                 containerStyle={{ padding: 0, margin: 0 }}
                             />
                             <Text style={{ fontSize: 16, color: 'white', marginLeft: 10 }}>Fraturas</Text>
                         </View>
                         <View style={{ flexDirection: 'row', alignItems: 'center', alignSelf: 'flex-start', marginTop: 5, marginLeft: 20 }}>
                             <CheckBox
-                                checked={isChecked}
-                                onPress={() => setIsChecked(!isChecked)}
+                                checked={isCheckedEctoparasitas}
+                                onPress={() => setIsCheckedEctoparasitas(!isCheckedEctoparasitas)}
                                 containerStyle={{ padding: 0, margin: 0 }}
                             />
                             <Text style={{ fontSize: 16, color: 'white', marginLeft: 10 }}>Ectoparasitas</Text>
                         </View>
                         <View style={{ flexDirection: 'row', alignItems: 'center', alignSelf: 'flex-start', marginTop: 5, marginLeft: 20 }}>
                             <CheckBox
-                                checked={isChecked}
-                                onPress={() => setIsChecked(!isChecked)}
+                                checked={isCheckedQuedaPelo}
+                                onPress={() => setIsCheckedQuedaPelo(!isCheckedQuedaPelo)}
                                 containerStyle={{ padding: 0, margin: 0 }}
                             />
                             <Text style={{ fontSize: 16, color: 'white', marginLeft: 10 }}>Queda de pelo</Text>
                         </View>
                         <View style={{ flexDirection: 'row', alignItems: 'center', alignSelf: 'flex-start', marginTop: 5, marginLeft: 20 }}>
                             <CheckBox
-                                checked={isChecked}
-                                onPress={() => setIsChecked(!isChecked)}
+                                checked={isCheckedAlopecia}
+                                onPress={() => setIsCheckedAlopecia(!isCheckedAlopecia)}
                                 containerStyle={{ padding: 0, margin: 0 }}
                             />
                             <Text style={{ fontSize: 16, color: 'white', marginLeft: 10 }}>Alopecia</Text>
                         </View>
                         <View style={{ flexDirection: 'row', alignItems: 'center', alignSelf: 'flex-start', marginTop: 5, marginLeft: 20 }}>
                             <CheckBox
-                                checked={isChecked}
-                                onPress={() => setIsChecked(!isChecked)}
+                                checked={isCheckedSecrecaoOcular}
+                                onPress={() => setIsCheckedSecrecaoOcular(!isCheckedSecrecaoOcular)}
                                 containerStyle={{ padding: 0, margin: 0 }}
                             />
                             <Text style={{ fontSize: 16, color: 'white', marginLeft: 10 }}>Secreção ocular</Text>
                         </View>
                         <View style={{ flexDirection: 'row', alignItems: 'center', alignSelf: 'flex-start', marginTop: 5, marginLeft: 20 }}>
                             <CheckBox
-                                checked={isChecked}
-                                onPress={() => setIsChecked(!isChecked)}
+                                checked={isCheckedDeficitVisual}
+                                onPress={() => setIsCheckedDeficitVisual(!isCheckedDeficitVisual)}
                                 containerStyle={{ padding: 0, margin: 0 }}
                             />
                             <Text style={{ fontSize: 16, color: 'white', marginLeft: 10 }}>Déficit visual</Text>
                         </View>
                         <View style={{ flexDirection: 'row', alignItems: 'center', alignSelf: 'flex-start', marginTop: 5, marginLeft: 20 }}>
                             <CheckBox
-                                checked={isChecked}
-                                onPress={() => setIsChecked(!isChecked)}
+                                checked={isCheckedSecrecao}
+                                onPress={() => setIsCheckedSecrecao(!isCheckedSecrecao)}
                                 containerStyle={{ padding: 0, margin: 0 }}
                             />
                             <Text style={{ fontSize: 16, color: 'white', marginLeft: 10 }}>Secreção</Text>
@@ -274,7 +291,7 @@ const Consultation = () => {
                             </TouchableOpacity>
                         </View>
                     </View>
-                    <TouchableOpacity style={styles.addButton} onPress={() => navigation.navigate('Register')}>
+                    <TouchableOpacity style={styles.addButton} onPress={() => navigation.navigate('History')}>
                         <Text style={styles.addText}>Salvar</Text>
                     </TouchableOpacity>
                 </ScrollView>
